@@ -1,0 +1,16 @@
+name = "pokemon-value-predictor"
+main = "worker/src/index.ts"
+compatibility_date = "2026-04-27"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pokemon_value_db"
+database_id = "<replace-with-your-d1-id>"
+migrations_dir = "worker/migrations"
+
+[[r2_buckets]]
+binding = "SNAPSHOTS"
+bucket_name = "pokemon-value-snapshots"
+
+[triggers]
+crons = ["0 11 * * *"]

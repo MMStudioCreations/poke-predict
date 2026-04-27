@@ -1,0 +1,17 @@
+{
+  "name": "pokemon-value-predictor-worker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply pokemon_value_db --local",
+    "db:seed": "wrangler d1 execute pokemon_value_db --local --file=./data/seed.sql"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260418.0",
+    "typescript": "^5.6.3",
+    "wrangler": "^4.15.0"
+  }
+}
